@@ -7,7 +7,7 @@ function RegisterButton(props) {
   return (
     <View>
       <TouchableOpacity style={styles.button} onPress={props.handleSubmit}>
-        <Link to="/user-list">
+        <Link to="/user-list" underlayColor="transparent">
           <Text style={styles.buttonText}>Register</Text>
         </Link>
       </TouchableOpacity>
