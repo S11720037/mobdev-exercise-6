@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 import {Input} from './src/input';
+import {RegisterButton} from './src/button';
 
 function App() {
   return (
@@ -14,9 +15,7 @@ function App() {
       <Input title="Address" placeholder="Masukan alamat anda" />
       <Input title="Phone Number" placeholder="Masukan nomor telepon anda" />
 
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Register</Text>
-      </TouchableOpacity>
+      <RegisterButton />
     </View>
   );
 }
