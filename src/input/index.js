@@ -2,6 +2,10 @@ import React from 'react';
 import {TextInput, Text, View} from 'react-native';
 
 function Input(props) {
+  const handleChange = e => {
+    props.handleChange(e.nativeEvent.text);
+  };
+
   return (
     <View>
       <Text
@@ -16,6 +20,7 @@ function Input(props) {
 
       <TextInput
         placeholder={props.placeholder}
+        onChange={handleChange}
         style={{
           borderWidth: 1,
           borderRadius: 10,
@@ -29,6 +34,10 @@ function Input(props) {
 }
 
 function NumericInput(props) {
+  const handleChange = e => {
+    props.handleChange(e.nativeEvent.text);
+  };
+
   return (
     <View>
       <Text
@@ -44,6 +53,7 @@ function NumericInput(props) {
       <TextInput
         placeholder={props.placeholder}
         keyboardType="numeric"
+        onChange={handleChange}
         style={{
           borderWidth: 1,
           borderRadius: 10,

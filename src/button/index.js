@@ -1,9 +1,9 @@
 import React from 'react';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 
-function RegisterButton() {
+function RegisterButton(props) {
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={props.handleSubmit}>
       <Text style={styles.buttonText}>Register</Text>
     </TouchableOpacity>
   );
