@@ -1,22 +1,25 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {ScrollView, Text, StyleSheet} from 'react-native';
 
-import {Input} from './src/input';
+import {Input, NumericInput} from './src/input';
 import {RegisterButton} from './src/button';
 
 function App() {
   return (
-    <View style={styles.container}>
+    <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
       <Text style={styles.title}>Registration</Text>
 
       <Input title="Name" placeholder="Masukan nama lengkap anda" />
       <Input title="Username" placeholder="Masukan usename anda" />
       <Input title="Email" placeholder="Masukan email anda" />
       <Input title="Address" placeholder="Masukan alamat anda" />
-      <Input title="Phone Number" placeholder="Masukan nomor telepon anda" />
+      <NumericInput
+        title="Phone Number"
+        placeholder="Masukan nomor telepon anda"
+      />
 
       <RegisterButton />
-    </View>
+    </ScrollView>
   );
 }
 
