@@ -6,8 +6,11 @@ import {Link} from 'react-router-native';
 function RegisterButton(props) {
   return (
     <View>
-      <TouchableOpacity style={styles.button} onPress={props.handleSubmit}>
-        <Link to="/user-list" underlayColor="transparent">
+      <TouchableOpacity style={styles.button}>
+        <Link
+          to="/user-list"
+          underlayColor="transparent"
+          onPress={props.handleSubmit}>
           <Text style={styles.buttonText}>Register</Text>
         </Link>
       </TouchableOpacity>
