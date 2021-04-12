@@ -10,7 +10,7 @@ function App() {
   return (
     <NativeRouter>
       <View>
-        <Route path="/" component={Register} />
+        <Route exact path="/" component={Register} />
         <Route path="/user-list" component={UserList} />
       </View>
     </NativeRouter>

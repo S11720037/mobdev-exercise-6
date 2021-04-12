@@ -1,11 +1,17 @@
 import React from 'react';
-import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+
+import {Link} from 'react-router-native';
 
 function RegisterButton(props) {
   return (
-    <TouchableOpacity style={styles.button} onPress={props.handleSubmit}>
-      <Text style={styles.buttonText}>Register</Text>
-    </TouchableOpacity>
+    <View>
+      <TouchableOpacity style={styles.button} onPress={props.handleSubmit}>
+        <Link to="/user-list">
+          <Text style={styles.buttonText}>Register</Text>
+        </Link>
+      </TouchableOpacity>
+    </View>
   );
 }
 
