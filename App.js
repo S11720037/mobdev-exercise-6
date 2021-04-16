@@ -3,8 +3,8 @@ import {ScrollView, View, Text, StyleSheet} from 'react-native';
 
 import {NativeRouter, Route, Link} from 'react-router-native';
 
-import Register from './Register';
-import UserList from './UserList';
+import Register from './src/components/pages/Register';
+import UserList from './src/components/pages/Register';
 
 function App() {
   return (

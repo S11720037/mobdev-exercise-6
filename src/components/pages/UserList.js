@@ -3,7 +3,7 @@ import {ScrollView, Text, StyleSheet} from 'react-native';
 
 import axios from 'axios';
 
-import Card from './src/card';
+import Card from '../molecules/card';
 
 function UserList() {
   const [data, setData] = useState([]);

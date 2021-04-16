@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {ScrollView, Text, StyleSheet} from 'react-native';
 
-import {Input, NumericInput} from './src/input';
-import {RegisterButton} from './src/button';
+import {Input, NumericInput} from '../atoms/input';
+import {RegisterButton} from '../atoms/button';
 
 function Register() {
   const [name, setName] = useState('');
