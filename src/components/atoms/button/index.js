@@ -18,6 +18,21 @@ function RegisterButton(props) {
   );
 }
 
+function AddUserButton(props) {
+  return (
+    <View>
+      <TouchableOpacity style={styles.button}>
+        <Link
+          to="/add-user"
+          underlayColor="transparent"
+          onPress={props.handleSubmit}>
+          <Text style={styles.buttonText}>Add User</Text>
+        </Link>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   button: {
     marginTop: 29,
@@ -33,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export {RegisterButton};
+export {RegisterButton, AddUserButton};
