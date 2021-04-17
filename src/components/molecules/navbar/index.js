@@ -8,11 +8,13 @@ function Navbar() {
       <Link to="/">
         <Text style={styles.text}>Home</Text>
       </Link>
-      <Link to="/">
-        <Text style={styles.text}>Home</Text>
+      <Text style={styles.text}> | </Text>
+      <Link to="/user-list">
+        <Text style={styles.text}>User List</Text>
       </Link>
-      <Link to="/">
-        <Text style={styles.text}>Home</Text>
+      <Text style={styles.text}> | </Text>
+      <Link to="/add-user">
+        <Text style={styles.text}>Add User</Text>
       </Link>
     </View>
   );
