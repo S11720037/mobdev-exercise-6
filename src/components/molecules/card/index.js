@@ -5,23 +5,15 @@ function Card(props) {
   return (
     <View style={styles.card}>
       <Text style={styles.bold}>
-        Name: <Text style={styles.normal}>{props.name}</Text>
+        First Name: <Text style={styles.normal}>{props.firstName}</Text>
       </Text>
 
       <Text style={styles.bold}>
-        Username: <Text style={styles.normal}>{props.username}</Text>
+        Last Name: <Text style={styles.normal}>{props.lastName}</Text>
       </Text>
 
       <Text style={styles.bold}>
         Email: <Text style={styles.normal}>{props.email}</Text>
-      </Text>
-
-      <Text style={styles.bold}>
-        Address: <Text style={styles.normal}>{props.address}</Text>
-      </Text>
-
-      <Text style={styles.bold}>
-        Phone: <Text style={styles.normal}>{props.phone}</Text>
       </Text>
     </View>
   );

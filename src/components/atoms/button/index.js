@@ -23,7 +23,7 @@ function AddUserButton(props) {
     <View>
       <TouchableOpacity style={styles.button}>
         <Link
-          to="/add-user"
+          to="/user-list"
           underlayColor="transparent"
           onPress={props.handleSubmit}>
           <Text style={styles.buttonText}>Add User</Text>

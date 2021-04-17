@@ -32,7 +32,7 @@ function AddUser() {
     console.log(data);
 
     axios
-      .post('http://10.0.2.12:3003/users', data)
+      .post('http://10.0.2.2:3003/users', data)
       .then(() => {})
       .catch(() => {
         Alert.alert('Informasi', 'Data Gagal Ditambahkan');

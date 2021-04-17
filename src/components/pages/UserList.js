@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {ScrollView, Text, StyleSheet} from 'react-native';
+import {ScrollView, Text, StyleSheet, Alert} from 'react-native';
 
 import axios from 'axios';
 
@@ -9,9 +9,14 @@ function UserList() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
-      setData(response.data);
-    });
+    axios
+      .get('http://10.0.2.2:3003/users')
+      .then(response => {
+        setData(response.data.reverse());
+      })
+      .catch(() => {
+        Alert.alert('Informasi', 'Gagal Terhubung ke json-server');
+      });
   }, []);
 
   return (
@@ -22,11 +27,9 @@ function UserList() {
         return (
           <Card
             key={i.id}
-            name={i.name}
-            username={i.username}
+            firstName={i.first_name}
+            lastName={i.last_name}
             email={i.email}
-            address={`${i.address.street}, ${i.address.suite},${i.address.city}, ${i.address.zipcode} `}
-            phone={i.phone}
           />
         );
       })}
